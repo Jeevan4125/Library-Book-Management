@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📚 Library Book Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Library Book Management System</h1>
+      <p>Manage your library books with ease</p>
+    </header>
+
+    <main>
+      <!-- Action Buttons -->
+      <section class="actions">
+        <button class="btn btn-primary" onclick="seedBooks()">🌱 Seed 7 Books</button>
+        <button class="btn btn-outline" onclick="fetchAll()">📚 View All Books</button>
+        <button class="btn btn-outline" onclick="fetchAfter2015()">📅 Books After 2015</button>
+      </section>
+
+      <!-- Category Search -->
+      <section class="input-group">
+        <input type="text" id="categoryInput" placeholder="Enter category (e.g., Sci-Fi, Fiction)" />
+        <button class="btn btn-secondary" onclick="fetchByCategory()">🔍 Search by Category</button>
+      </section>
+
+      <!-- Update Copies -->
+      <section class="input-group">
+        <input type="text" id="bookIdCopies" placeholder="Book ID" />
+        <input type="number" id="copyChange" placeholder="Copies change (+2 or -1)" />
+        <button class="btn btn-warning" onclick="updateCopies()">🔄 Update Copies</button>
+      </section>
+
+      <!-- Update Category -->
+      <section class="input-group">
+        <input type="text" id="bookIdCat" placeholder="Book ID" />
+        <input type="text" id="newCategory" placeholder="New Category" />
+        <button class="btn btn-info" onclick="updateCategory()">🏷️ Change Category</button>
+      </section>
+
+      <!-- Delete Book -->
+      <section class="input-group">
+        <input type="text" id="bookIdDelete" placeholder="Book ID (must have 0 copies)" />
+        <button class="btn btn-danger" onclick="deleteBook()">🗑️ Delete Book</button>
+      </section>
+
+      <!-- Messages -->
+      <div id="message"></div>
+
+      <!-- Book List -->
+      <div id="books" class="book-list"></div>
+    </main>
+
+    <footer>
+      <p>© 2026 Library Management System | Built with ❤️</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
